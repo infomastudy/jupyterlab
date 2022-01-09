@@ -1,11 +1,9 @@
-# image:
-#   file: .gitpod.Dockerfile
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
- tasks:
-   - init: pip install jupyter lab # runs during prebuild
-    #  command: jupyter lab
+tasks:
+  - init: echo 'init script' # runs during prebuild
+    command: echo 'start script'
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
-# ports:
-#   - port: 8888
-#     onOpen: open-browser
+ports:
+  - port: 3000
+    onOpen: open-preview
